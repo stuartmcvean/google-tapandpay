@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raphagodoi/google-tapandpay.git"
+    "url": "git+https://github.com/andregrillo/google-tapandpay.git"
   },
   "bugs": {
-    "url": "https://github.com/raphagodoi/google-tapandpay/issues"
+    "url": "https://github.com/andregrillo/google-tapandpay/issues"
   },
-  "homepage": "https://github.com/raphagodoi/google-tapandpay#readme"
+  "homepage": "https://github.com/andregrillo/google-tapandpay#readme"
 }
