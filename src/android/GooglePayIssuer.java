@@ -1,4 +1,4 @@
-package com.googlepay.googlepayissuer;
+package com.googlepay;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
