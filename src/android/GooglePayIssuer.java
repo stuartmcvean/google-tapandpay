@@ -1,4 +1,4 @@
-package com.raphaelgodoi;
+package com.googlepay.googlepayissuer;
 
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CallbackContext;
