@@ -14,8 +14,11 @@
         <clobbers target="GooglePayIssuer" />
     </js-module>
 
-    <platform name="android">      
-        <framework src="com.google.android.gms:play-services-tapandpay:17.0.1" />
+    <platform name="android">
+        <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target="libs/play-services-tapandpay-17.0.1.aar" />
+        <!--
+        <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target-dir="libs/play-services-tapandpay-17.0.1.aar" />
+        -->
         <framework src="com.google.android.gms:play-services-oss-licenses:17.0.0" />
     
         <config-file target="config.xml" parent="/*">
@@ -23,6 +26,7 @@
                 <param name="android-package" value="com.raphaelgodoi.GooglePayIssuer" />
             </feature>
         </config-file>
-        <source-file src="src/android/GooglePayIssuer.java" target-dir="src/com/raphaelgodoi/googlepayissuer" />
+        <source-file src="src/android/GooglePayIssuer.java" target-dir="src/com/googlepay/googlepayissuer" />
+        <framework src="src/android/tapandpay.gradle" custom="true" type="gradleReference" /> 
     </platform>
 </plugin>
