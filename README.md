@@ -13,21 +13,27 @@ This plugin requires `cordova@7.1+` (CLI) and `cordova-android@8+` (Android plat
     cordova plugin add https://github.com/andregrillo/google-tapandpay.git
 
 # How to use
+## Functions
+
+### PushProvision
+Starts the push tokenization flow in which the issuer provides most or all card details needed for Google Pay to get a valid token. Tokens added using this method are added to the active wallet.
 
 ```javascript
-    declare var GooglePayIssuer: any;
-
-    var googlePay = new GooglePayIssuer();
-
-    GooglePayIssuer.prototype.getActiveWalletID((walletID)=>{
-        console.log(walletID);
-    },(error)=>{
-        console.log(error);
-    });
-    
-```
-
-# Functions
+    let opc = "eyJhb...0zfF20w";
+    let tsp = "VISA";
+    let clientName = "John Doe";
+    let lastDigits = "1234";
+    let address = {
+        name:"John Doe",
+        address: "St. Some Street",
+        locality: "London",
+        administrativeArea: "Sutton",
+        countryCode:"UK",
+        postalCode: "99999",
+        phoneNumber: "9999999999"
+    };
+    GooglePayIssuer.prototype.pushProvision(opc,tsp,clientName,lastDigits,address,onSuccess,onError);
+```   
 
 ### GetTokenStatus
 Return the token status for a token in the active wallet.
@@ -59,26 +65,6 @@ Returns the stable hardware ID of the device. Each physical Android device has a
 ```javascript
     GooglePayIssuer.prototype.getStableHardwareId(onSuccess,onError);
 ```
-
-### PushProvision
-Starts the push tokenization flow in which the issuer provides most or all card details needed for Google Pay to get a valid token. Tokens added using this method are added to the active wallet.
-
-```javascript
-    let opc = "eyJhb...0zfF20w";
-    let tsp = "VISA";
-    let clientName = "John Doe";
-    let lastDigits = "1234";
-    let address = {
-        name:"John Doe",
-        address: "St. Some Street",
-        locality: "London",
-        administrativeArea: "Sutton",
-        countryCode:"UK",
-        postalCode: "99999",
-        phoneNumber: "9999999999"
-    };
-    GooglePayIssuer.prototype.pushProvision(opc,tsp,clientName,lastDigits,address,onSuccess,onError);
-```   
 
 # Credits
 Thanks to [**Raphael Godoi**](https://github.com/raphagodoi) and [**Guilherme Rodrigues**](https://github.com/Guiles92)
