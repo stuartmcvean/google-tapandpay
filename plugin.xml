@@ -14,6 +14,9 @@
         <clobbers target="GooglePayIssuer" />
     </js-module>
 
+    <dependency id="cordova-androidx-build" 
+                    url="https://github.com/cmfsotelo/cordova-androidx-build.git#outsystems-compat" />
+
     <platform name="android">
         <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target="libs/play-services-tapandpay-17.0.1.aar" />
         <!--
