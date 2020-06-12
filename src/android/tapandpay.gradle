@@ -6,6 +6,7 @@ buildscript {
 }
 
 dependencies {
+        implementation 'com.android.support:support-annotations:27.0.1'
         implementation files('src/main/libs/play-services-tapandpay-17.0.1.aar')
 }
 
