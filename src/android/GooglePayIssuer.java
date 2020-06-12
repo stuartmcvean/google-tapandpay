@@ -30,8 +30,8 @@ import com.google.android.gms.tasks.Task;
 
 import java.nio.charset.Charset;
 
-import androidx.annotation.NonNull;
-import androidx.core.content.ContextCompat;
+//import androidx.annotation.NonNull;
+//import androidx.core.content.ContextCompat;
 
 public class GooglePayIssuer extends CordovaPlugin {
 
