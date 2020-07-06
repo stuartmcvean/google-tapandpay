@@ -15,6 +15,8 @@
     </js-module>
 
     <platform name="android">
+        <dependency url="https://github.com/cmfsotelo/cordova-androidx-build.git#1.0-OS.1" />
+
         <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target="libs/play-services-tapandpay-17.0.1.aar" />
         <!--
         <resource-file src="src/android/lib/play-services-tapandpay-17.0.1.aar" target-dir="libs/play-services-tapandpay-17.0.1.aar" />
